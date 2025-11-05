@@ -23,11 +23,30 @@
         background-size: 200% 200%;
         animation: gradientMove 20s ease-in-out infinite;
       }
-    </style>
-  </head>
-  <body class="animated-bg">
-    <div class="bg-gradient-to-r from-cyan-400/10 via-violet-400/10 to-fuchsia-400/10 border-b border-white/5">
-      <div class="mx-auto max-w-7xl px-4 py-2 text-center text-sm text-white/70">
+    <style>
+  body {
+    background-color: #000000;
+    color: white;
+    overflow-x: hidden;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animated-bg {
+    background:
+      radial-gradient(circle at 30% 20%, rgba(168, 85, 247, 0.3), transparent 70%),
+      radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.25), transparent 70%),
+      radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.2), transparent 80%);
+    background-color: #000000;
+    background-size: 200% 200%;
+    animation: gradientShift 25s ease-in-out infinite;
+  }
+</style>
+
         Trusted by 50+ founders · Limited private spots available
       </div>
     </div>
